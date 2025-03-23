@@ -19,9 +19,10 @@ VALIDATE(){
 }
 
 check_root(){
-    if [ $USE$RID -ne 0 ]
+    if [ $USERID -ne 0 ]
     then 
         echo "please run with root"
+        exit 1
     else 
         echo "you are root user"
     fi
