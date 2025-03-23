@@ -13,4 +13,4 @@ do
   fi
 done <<<$DISK_USAGE
 echo -e "message:: $MESSAGE"
-echo -e "$MESSAGE | s-nail -s "DISk USAGE ALERT" nethra.sangeetham@gmail.com"      
+echo "$MESSAGE" | s-nail -s "DISk USAGE ALERT" nethra.sangeetham@gmail.com     
