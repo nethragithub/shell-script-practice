@@ -6,7 +6,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 Y="\e[32m"
 G="\e[33m"
-N="\e[0m'
+N="\e[0m"
 echo "script started at:: $TIMESTAMP"
 VALIDATE(){
     if [ $1 -ne 0 ]
