@@ -33,3 +33,5 @@ do
     else
         dnf install $i -y &>>LOGFILE
         VALIDATE $? "package installtion"
+    fi
+done        
