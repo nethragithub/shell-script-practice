@@ -12,13 +12,15 @@ VALIDATE(){
     if [ $1 -ne 0 ]
     then
         echo -e "$2 is $Y failed $N"
+        exit 1
     else
         echo -e "$2 is $R success $N"    
     fi
 }
-if [ $USE$RID -ne 0 ]
+if [ $USERID -ne 0 ]
 then 
     echo "please run with root"
+    exit 1
 else 
     echo "you are root user"
 fi
@@ -30,6 +32,7 @@ do
     if [ $? -ne 0 ]
     then
         echo -e "package is already installed.....$R skipping $N"
+        exit 1
     else
         dnf install $i -y &>>LOGFILE
         VALIDATE $? "package installtion"
