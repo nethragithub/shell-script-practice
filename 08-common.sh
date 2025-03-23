@@ -6,7 +6,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 Y="\e[32m"
 G="\e[33m"
-N="\e[0m'
+N="\e[0m"
 echo "script started at:: $TIMESTAMP"
 
 VALIDATE(){
@@ -32,4 +32,4 @@ HANDLE_ERROR(){
     echo "error at line::$1,error command::$2"
 }
 
-trap 'HANDLE_ERROR "${LINENO}" "$BASH_COMMAND"' ERR
+trap 'HANDLE_ERROR ${LINENO} "$BASH_COMMAND"' ERR
