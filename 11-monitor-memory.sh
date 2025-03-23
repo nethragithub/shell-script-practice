@@ -11,4 +11,5 @@ do
       MESSAGE+= "$FOLDER is more than $DISk_THRESHOLD, current usage is:: $USAGE \n"
   fi
 done <<<$DISK_USAGE
+echo -e "MESSAGE:: $MESSAGE"
 echo -e "$MESSAGE / s-nail -s "DISk_USAGE ALERT" nethra.sangeetham@gmail.com"      
