@@ -29,10 +29,9 @@ for i in $@
 do
     echo "package need to install:: $i"
     dnf list installed $i &>>$LOGFILE
-    if [ $? -ne 0 ]
+    if [ $? -eq 0 ]
     then
         echo -e "package is already installed.....$R skipping $N"
-        exit 1
     else
         dnf install $i -y &>>LOGFILE
         VALIDATE $? "package installtion"
