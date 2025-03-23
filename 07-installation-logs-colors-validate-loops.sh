@@ -26,7 +26,7 @@ fi
 for i in $@
 do
     echo "package need to install:: $i"
-    dnf list installed $i &>>L$LOGFILE
+    dnf list installed $i &>>$LOGFILE
     if [ $? -ne 0 ]
     then
         echo -e "package is already installed.....$R skipping $N"
