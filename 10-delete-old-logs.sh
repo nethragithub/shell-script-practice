@@ -7,8 +7,7 @@ else
     echo -e "$SOURCE_DIRECTORY is no exist"
     mkdir -p /tmp/app-logs
 fi
-FILES=$(find $SOURCE_DIRECTORY -name "*.logs" -mtime +14)
-echo "files to delete:: $FILES"
+FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14)
 
 while IFS= read -r line
 do
